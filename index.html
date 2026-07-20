@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veahood</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #c8ff00;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Dekorasi latar lembut */
+        .bg-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(0,0,0,0.03);
+        }
+        .circle-1 {
+            width: 500px;
+            height: 500px;
+            top: -150px;
+            left: -100px;
+        }
+        .circle-2 {
+            width: 350px;
+            height: 350px;
+            bottom: -100px;
+            right: -80px;
+        }
+
+        .container {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            z-index: 1;
+        }
+
+        /* === LOGO KOTAK SUDUT TUMPUL PERSIS GAMBAR === */
+        .logo-icon {
+            width: 220px;
+            height: 220px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo-box {
+            width: 100%;
+            height: 100%;
+            background-color: #000000;
+            border-radius: 32px; /* Sudut tumpul persis */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo-symbol {
+            width: 65%;
+            height: 65%;
+            position: relative;
+        }
+
+        .logo-symbol span {
+            position: absolute;
+            background-color: #c8ff00;
+        }
+        /* Garis V kiri */
+        .v-left {
+            left: 12%;
+            bottom: 18%;
+            width: 14%;
+            height: 55%;
+            clip-path: polygon(0 0, 100% 0, 100% 100%);
+            transform: skewX(25deg);
+        }
+        /* Garis V kanan */
+        .v-right {
+            right: 12%;
+            bottom: 18%;
+            width: 14%;
+            height: 55%;
+            clip-path: polygon(0 0, 100% 0, 0 100%);
+            transform: skewX(-25deg);
+        }
+        /* Titik tengah */
+        .v-dot {
+            left: 38%;
+            bottom: 15%;
+            width: 24%;
+            height: 12%;
+            border-radius: 12px;
+        }
+
+        .coming-soon {
+            font-size: 24px;
+            color: #556b00;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-weight: 500;
+        }
+
+        .tagline {
+            font-size: 20px;
+            color: #000000;
+            font-weight: 500;
+            max-width: 480px;
+            line-height: 1.6;
+            opacity: 0.85;
+        }
+
+        .social-button {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 32px;
+            border: 2px solid #556b00;
+            border-radius: 50px;
+            text-decoration: none;
+            color: #000000;
+            font-size: 28px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            margin-top: 8px;
+        }
+
+        .social-button:hover {
+            background-color: rgba(0,0,0,0.05);
+        }
+
+        .x-icon {
+            width: 32px;
+            height: 32px;
+        }
+
+        .footer-text {
+            position: absolute;
+            bottom: 40px;
+            font-size: 24px;
+            color: #556b00;
+            opacity: 0.8;
+        }
+
+        /* Tampilan HP */
+        @media (max-width: 768px) {
+            .logo-icon { width: 170px; height: 170px; }
+            .tagline { font-size: 17px; padding: 0 20px; }
+            .social-button { font-size: 22px; padding: 12px 24px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-circle circle-1"></div>
+    <div class="bg-circle circle-2"></div>
+
+    <div class="container">
+        <!-- LOGO KOTAK PERSIS GAMBAR -->
+        <div class="logo-icon">
+            <div class="logo-box">
+                <div class="logo-symbol">
+                    <span class="v-left"></span>
+                    <span class="v-right"></span>
+                    <span class="v-dot"></span>
+                </div>
+            </div>
+        </div>
+
+        <p class="coming-soon">COMING SOON</p>
+        <p class="tagline">Building the next community on Robinhood Chain. Real people, real gains.</p>
+
+        <a href="#" class="social-button">
+            <svg class="x-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+            @veahood_xyz
+        </a>
+    </div>
+
+    <p class="footer-text">veahood.xyz</p>
+</body>
+</html>
